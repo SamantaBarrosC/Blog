@@ -1,15 +1,20 @@
-<html>
-    <head>
-        <title> Contatos </title>
-    </head>
-    <body>
-        <a href="http://www.oceanbrasil.com/">Isso é um link</a>
-        <h1>Samanta Barros </h1>
-        <h2>Samanta@email.com </h2> 
-        <h3>11345678907</h3>
-        <ol> 
-            <li> item 1</li>
-            <li> iten 2</li>
-        </ol>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+        {%  for post in posts %}
+        <article class="post">
+            <header>
+                <div>
+                    <h1> {{ post.title}}</h1>
+                    <div class="about"> by {{ post.author}} on {{post.created.strftime('%d/%m/%Y')}} </div>
+                </div>
+
+            </header>
+            <p class="body"> {{post.body}}</p>
+
+        </article>
+        {% if not loop.last %}
+            <hr>
+        {% endif %}
+
+    {% endfor %}
+ {% endblock %}

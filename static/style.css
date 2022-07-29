@@ -1,4 +1,4 @@
-html {
+html{
     font-family: sans-serif;
     background: #eee;
     padding: 1rem;
@@ -6,31 +6,44 @@ html {
 body{
     max-width: 960px;
     margin: 0 auto;
-   background: white;
+    background: white;
 }
 h1{
     font-family: serif;
     color: #377ba8;
     margin: 1rem 0;
 }
-hr{ 
+hr{
     border: none;
     border-top: 1px solid lightgray;
 }
-.content 
-{
-padding: 0 1rem 1 rem;
-}
-.post .about
-{
-color:slategray;
-font-style: italic;
+.content{
+    padding: 0 1rem 1rem;
 }
 .post > header > div:first-of-type{
     flex: auto;
 }
-.post .body
-{
+.post .about{
+    color: slategray;
+    font-style: italic;
+}
+.post .body{
     white-space: pre-line;
-
+}
+.no-posts{
+    font-style: italic;
+    color: gray;
+}
+.content form{
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+.content label{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.content input{
+    margin-bottom: 1em; 
 }
